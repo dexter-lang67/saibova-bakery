@@ -78,6 +78,80 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sky *,.garland i,.panel.on{animation:none!important}#snow,.flyover{display:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
+<style>
+/* ===== яркое рождество ===== */
+:root{--red:#A5111F;--wine:#6E0B16;--pine:#0E4A33;--deep:#08301F;--gold:#F4C95D;--cream:#FFF6E6}
+body{background:var(--wine)}
+body>div>div:first-of-type:not(.garland):not(.sky){background:var(--deep)!important;color:var(--gold)!important}
+header{max-width:none!important;background:var(--red);padding-left:max(24px,calc(50% - 596px))!important;padding-right:max(24px,calc(50% - 596px))!important}
+header a,header a span{color:var(--cream)!important}
+header a span span:last-child{color:var(--gold)!important}
+header nav a[href="#contact"]{background:var(--gold)!important;color:#3A0710!important}
+.garland{background:var(--red);border-top-color:var(--gold)}
+#top{max-width:none!important;position:relative;padding:64px max(24px,calc(50% - 596px)) 88px!important;background:radial-gradient(circle at 80% 20%,#C4202F,transparent 55%),linear-gradient(160deg,var(--red),var(--wine));color:var(--cream)}
+.greet{color:var(--wine);text-wrap:balance}
+.land path:last-child{fill:var(--red)}
+#top h1 span{color:var(--gold)!important}
+#top p{color:#FFE9DD!important}
+#top>div:nth-child(2)>div:first-child{border-color:var(--gold)!important;color:var(--gold)!important}
+#top a[href="#sets"]{background:var(--gold)!important;color:#3A0710!important;box-shadow:0 12px 26px -10px rgba(244,201,93,.7)}
+#top a[href="#cakes"]{color:var(--cream)!important;border-color:var(--cream)!important}
+#top>div:nth-child(2)>div:last-child{border-top-color:rgba(244,201,93,.45)!important}
+#top>div:nth-child(2)>div:last-child span{color:#FFE9DD!important}
+#top>div:nth-child(2)>div:last-child span:first-child{color:var(--gold)!important}
+.hero-photo{border:5px solid var(--gold);box-shadow:0 0 0 10px var(--pine),0 34px 60px -24px rgba(0,0,0,.6)!important}
+#top>div:last-child>div{color:#2A1A12}
+#top>div:last-child>div span{color:inherit}
+.candy{height:16px;background:repeating-linear-gradient(-45deg,#D3202F 0 16px,#FFF6E6 16px 32px)}
+#top+.candy+div,.words{background:var(--pine)!important;color:var(--gold)!important}
+#sets,#cakes,#order{max-width:none!important;padding-left:max(24px,calc(50% - 596px))!important;padding-right:max(24px,calc(50% - 596px))!important}
+#sets{background:radial-gradient(circle at 15% 0,#17684A,transparent 50%),linear-gradient(var(--pine),var(--deep))}
+#sets>div:first-child,#sets>div:first-child h2,#sets>div:first-child p,.panel-title{color:var(--cream)!important}
+#sets>div:first-child span{color:var(--gold)!important}
+#sets h2 span{font-style:italic}
+.tabs button{background:transparent;color:var(--cream);border-color:var(--gold)}
+.tabs button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#3A0710}
+.tabs button[aria-pressed=true] em{background:var(--red);color:#fff}
+.card{background:var(--cream);border:2px solid var(--gold);box-shadow:0 24px 40px -26px rgba(0,0,0,.7)}
+.card.hit{border:4px solid #D3202F}
+.card.max{background:linear-gradient(160deg,var(--red),var(--wine));border-color:var(--gold);color:var(--cream)}
+.card.max .head p,.card.max ul,.card.max .price s{color:#FFE3D6}
+.badge,.card.hit a.btn{background:#C2182A}
+.price strong{color:var(--red)}.card.max .price strong{color:var(--gold)}
+.card a.btn{border-color:var(--pine);color:var(--pine)}
+.card.hit a.btn{border-color:#C2182A;color:#fff}
+.card.max a.btn{color:#3A0710;border-color:var(--gold)}
+#gift{background:linear-gradient(#FFF6E6,#F9E7CC)!important}
+#cakes{background:radial-gradient(circle at 85% 0,#BF1F2E,transparent 50%),linear-gradient(var(--red),var(--wine))}
+#cakes>div:first-child h2,#cakes>div:first-child p{color:var(--cream)!important}
+#cakes>div:first-child span{color:var(--gold)!important}
+#cakes>div:last-child>div{border:2px solid var(--gold)!important;background:var(--cream)!important}
+#cake{background:var(--deep)!important}
+#cake img:last-of-type{border-color:var(--deep)!important}
+#about{background:var(--pine)!important}
+#about h2,#about p{color:var(--cream)!important}
+#about span,#about p:last-child{color:var(--gold)!important}
+#about h2 span{color:var(--gold)!important}
+#about img{border:4px solid var(--gold)}
+#order{background:var(--cream);border:0!important}
+#order span{color:var(--red)!important}
+#contact{background:radial-gradient(circle at 20% 20%,#C4202F,transparent 55%),var(--wine)!important}
+#contact a{background:var(--gold)!important;color:#3A0710!important}
+footer{background:var(--deep)!important}
+/* ёлочные шары */
+.baubles{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none}
+.baubles i{position:absolute;top:0;width:2px;height:var(--h);background:var(--gold);transform-origin:50% 0;animation:swing 4s ease-in-out infinite alternate}
+.baubles i::after{content:"";position:absolute;top:100%;left:-13px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 6%,var(--c) 40%,#2b0a0a 130%);box-shadow:0 0 14px var(--c)}
+@keyframes swing{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+@media(max-width:700px){.baubles{display:none}}
+@media(prefers-reduced-motion:reduce){.baubles i{animation:none}}
+#top>div:nth-child(2)>div:first-child{color:var(--gold)!important}
+#top>div:nth-child(2)>div:first-child svg{stroke:var(--gold)}
+#top>div:nth-child(2)>div:last-child span+span{color:#FFE9DD!important}
+.garland{background:var(--deep)}
+#cakes a{color:var(--red)!important}
+.baubles i:first-child{left:1.2%!important;height:24px!important}
+</style>
 </head>
 <body>
 <div style="font-family: 'Manrope', system-ui, sans-serif; color: #2A1A12; background: #F3EBDF; width: 100%; min-height: 100vh">
@@ -135,11 +209,13 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 <path d="M94 87 l3 6 6.500 1 -4.700 4.500 1.100 6.500 -5.900 -3.100 -5.900 3.100 1.100 -6.500 -4.700 -4.500 6.500 -1z" fill="#F2C65A"/>
 </g><g transform="translate(212 66)"><g class="gallop" style="animation-delay:0.00s"><g transform="translate(12 26)"><g class="leg back" style="animation-delay:-0.12s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(54 26)"><g class="leg front" style="animation-delay:-0.12s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><path transform="translate(-6 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#B8925E" stroke-width="3" stroke-linecap="round"/><path d="M3 12 C-5 7 -4 -1 4 3 L10 11 Z" fill="#F7E9D2"/><path d="M3 16 C3 3 20 4 34 7 C46 9 54 8 60 3 C66 -3 70 4 68 14 C66 30 54 34 34 33 C14 33 3 29 3 16Z" fill="#9C6238"/><path d="M16 29 C30 34 50 33 61 24 C56 34 24 37 16 29Z" fill="#D9B48A"/><path d="M55 10 C60 2 63 -6 70 -9 C78 -12 82 -4 88 0 C96 3 100 6 97 11 C93 16 83 13 77 12 C74 18 70 22 64 24Z" fill="#A96B3E"/><path d="M70 -7 C62 -14 55 -12 55 -10 C59 -4 66 -3 72 -4Z" fill="#8A532F"/><circle cx="82" cy="0" r="2.1" fill="#1D100A"/><path transform="translate(0 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#E3C08C" stroke-width="3" stroke-linecap="round"/><circle cx="96" cy="8" r="3.4" fill="#2A1A12"/><path d="M58 6 C62 17 68 20 75 12" fill="none" stroke="#B4232F" stroke-width="4.5" stroke-linecap="round"/><circle cx="67" cy="18" r="3.6" fill="#F2C65A"/><g transform="translate(18 27)"><g class="leg back" style="animation-delay:0.00s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(59 24)"><g class="leg front" style="animation-delay:0.00s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g></g></g><g transform="translate(332 58)"><g class="gallop" style="animation-delay:-0.22s"><g transform="translate(12 26)"><g class="leg back" style="animation-delay:-0.34s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(54 26)"><g class="leg front" style="animation-delay:-0.34s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><path transform="translate(-6 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#B8925E" stroke-width="3" stroke-linecap="round"/><path d="M3 12 C-5 7 -4 -1 4 3 L10 11 Z" fill="#F7E9D2"/><path d="M3 16 C3 3 20 4 34 7 C46 9 54 8 60 3 C66 -3 70 4 68 14 C66 30 54 34 34 33 C14 33 3 29 3 16Z" fill="#9C6238"/><path d="M16 29 C30 34 50 33 61 24 C56 34 24 37 16 29Z" fill="#D9B48A"/><path d="M55 10 C60 2 63 -6 70 -9 C78 -12 82 -4 88 0 C96 3 100 6 97 11 C93 16 83 13 77 12 C74 18 70 22 64 24Z" fill="#A96B3E"/><path d="M70 -7 C62 -14 55 -12 55 -10 C59 -4 66 -3 72 -4Z" fill="#8A532F"/><circle cx="82" cy="0" r="2.1" fill="#1D100A"/><path transform="translate(0 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#E3C08C" stroke-width="3" stroke-linecap="round"/><circle cx="96" cy="8" r="3.4" fill="#2A1A12"/><path d="M58 6 C62 17 68 20 75 12" fill="none" stroke="#B4232F" stroke-width="4.5" stroke-linecap="round"/><circle cx="67" cy="18" r="3.6" fill="#F2C65A"/><g transform="translate(18 27)"><g class="leg back" style="animation-delay:-0.22s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(59 24)"><g class="leg front" style="animation-delay:-0.22s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g></g></g><g transform="translate(452 50)"><g class="gallop" style="animation-delay:-0.44s"><g transform="translate(12 26)"><g class="leg back" style="animation-delay:-0.56s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(54 26)"><g class="leg front" style="animation-delay:-0.56s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#6E4124" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><path transform="translate(-6 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#B8925E" stroke-width="3" stroke-linecap="round"/><path d="M3 12 C-5 7 -4 -1 4 3 L10 11 Z" fill="#F7E9D2"/><path d="M3 16 C3 3 20 4 34 7 C46 9 54 8 60 3 C66 -3 70 4 68 14 C66 30 54 34 34 33 C14 33 3 29 3 16Z" fill="#9C6238"/><path d="M16 29 C30 34 50 33 61 24 C56 34 24 37 16 29Z" fill="#D9B48A"/><path d="M55 10 C60 2 63 -6 70 -9 C78 -12 82 -4 88 0 C96 3 100 6 97 11 C93 16 83 13 77 12 C74 18 70 22 64 24Z" fill="#A96B3E"/><path d="M70 -7 C62 -14 55 -12 55 -10 C59 -4 66 -3 72 -4Z" fill="#8A532F"/><circle cx="82" cy="0" r="2.1" fill="#1D100A"/><path transform="translate(0 0)" d="M70 -6 C66 -20 56 -24 50 -36 M63 -20 C54 -20 50 -24 44 -23 M57 -27 C58 -34 62 -38 61 -44 M72 -7 C74 -18 82 -23 82 -34 M76 -18 C84 -18 88 -22 94 -23" fill="none" stroke="#E3C08C" stroke-width="3" stroke-linecap="round"/><circle class="glow" cx="97" cy="8" r="10" fill="#FF4A3D" opacity=".35"/><circle cx="97" cy="8" r="4.6" fill="#FF3B30"/><path d="M58 6 C62 17 68 20 75 12" fill="none" stroke="#B4232F" stroke-width="4.5" stroke-linecap="round"/><circle cx="67" cy="18" r="3.6" fill="#F2C65A"/><g transform="translate(18 27)"><g class="leg back" style="animation-delay:-0.44s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g><g transform="translate(59 24)"><g class="leg front" style="animation-delay:-0.44s"><path d="M0 0 L3 17 L-1 32" fill="none" stroke="#8A532F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 32 L-2 36" stroke="#2A1A12" stroke-width="5.5" stroke-linecap="round"/></g></g></g></g><path d="M150 66 Q215 100 279 81 Q340 104 399 73 Q460 94 519 65" fill="none" stroke="#F2C65A" stroke-width="2.2"/></svg></div>
 <svg class="land" viewBox="0 0 1200 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 138 C180 96 330 150 520 128 C730 100 900 156 1200 112 V180 H0Z" fill="#7E97B8" opacity=".55"/><path d="M40 94 L54.19 126.68 H47.568 L58.92 154.2 H51.352000000000004 L63.650000000000006 180 H16.349999999999998 L28.648 154.2 H21.08 L32.432 126.68 H25.81Z" fill="#1C4A45"/><path d="M86 120 L95.9 142.8 H91.28 L99.2 162.0 H93.92 L102.5 180 H69.5 L78.08 162.0 H72.8 L80.72 142.8 H76.1Z" fill="#1C4A45"/><path d="M130 80 L146.5 118.0 H138.8 L152.0 150.0 H143.2 L157.5 180 H102.5 L116.8 150.0 H108.0 L121.2 118.0 H113.5Z" fill="#1C4A45"/><path d="M300 132 L307.92 150.24 H304.224 L310.56 165.6 H306.336 L313.2 180 H286.8 L293.664 165.6 H289.44 L295.776 150.24 H292.08Z" fill="#1C4A45"/><path d="M900 128 L908.58 147.76 H904.576 L911.44 164.4 H906.864 L914.3 180 H885.7 L893.136 164.4 H888.56 L895.424 147.76 H891.42Z" fill="#1C4A45"/><path d="M1060 84 L1075.84 120.48 H1068.448 L1081.12 151.2 H1072.672 L1086.4 180 H1033.6 L1047.328 151.2 H1038.88 L1051.552 120.48 H1044.16Z" fill="#1C4A45"/><path d="M1115 114 L1125.89 139.07999999999998 H1120.808 L1129.52 160.2 H1123.712 L1133.15 180 H1096.85 L1106.288 160.2 H1100.48 L1109.192 139.07999999999998 H1104.11Z" fill="#1C4A45"/><path d="M1165 90 L1179.85 124.2 H1172.92 L1184.8 153.0 H1176.88 L1189.75 180 H1140.25 L1153.12 153.0 H1145.2 L1157.08 124.2 H1150.15Z" fill="#1C4A45"/><path d="M0 160 C220 130 420 178 640 158 C860 138 1040 176 1200 148 V180 H0Z" fill="#E4EBF5"/><path d="M0 174 C300 158 520 184 800 170 C980 162 1100 176 1200 168 V180 H0Z" fill="#F3EBDF"/></svg>
-<p class="greet">С Новым годом и Рождеством!</p>
+<p class="greet">С наступающим Новым годом и Рождеством!</p>
 </div>
 
 <!-- hero -->
 <section id="top" style="max-width: 1240px; margin: 0 auto; padding: 32px 24px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 56px; align-items: center">
+<div class="baubles" aria-hidden="true"><i style="left:2%;--h:70px;--c:#F4C95D;animation-delay:-0s"></i><i style="left:47%;--h:42px;--c:#2E9E6A;animation-delay:-1.3s"></i><i style="left:53%;--h:76px;--c:#F4C95D;animation-delay:-2.1s"></i><i style="left:96%;--h:52px;--c:#2E9E6A;animation-delay:-0.7s"></i></div>
+
 <div style="display: flex; flex-direction: column; gap: 26px">
 <div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; border: 1px solid #CDB89F; border-radius: 999px; padding: 8px 16px; font-size: 13px; color: #6A4A36">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0522D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4-3 8-7 8-12a8 8 0 0 0-16 0c0 5 4 9 8 12z"></path><path d="M12 22V10"></path><path d="M12 14l-3-3"></path><path d="M12 12l3-3"></path></svg>
@@ -168,8 +244,9 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 </div>
 </section>
 
+<div class="candy" aria-hidden="true"></div>
 <!-- word strip -->
-<div style="background: #A0522D; color: #FBF3E8; overflow: hidden">
+<div class="words" style="background: #A0522D; color: #FBF3E8; overflow: hidden">
 <div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px">
 <span>корица</span><span aria-hidden="true">✦</span><span>сливочный крем</span><span aria-hidden="true">✦</span><span>мягкое тесто</span><span aria-hidden="true">✦</span><span>новогоднее настроение</span><span aria-hidden="true">✦</span><span>подарки близким</span>
 </div>
@@ -206,6 +283,7 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 </div></div>
 </section>
 
+<div class="candy" aria-hidden="true"></div>
 <!-- gift packaging -->
 <section id="gift" style="background: #E9DCC9">
 <div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 56px; align-items: center">
@@ -233,6 +311,7 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 </div>
 </section>
 
+<div class="candy" aria-hidden="true"></div>
 <!-- cupcakes -->
 <section id="cakes" style="max-width: 1240px; margin: 0 auto; padding: 104px 24px 96px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
@@ -362,6 +441,7 @@ a{color:#5A2A5C}a:hover{color:#3E1A40}
 </div>
 </section>
 
+<div class="candy" aria-hidden="true"></div>
 <!-- CTA -->
 <section id="contact" style="background: #5A2A5C; color: #FFFFFF">
 <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
